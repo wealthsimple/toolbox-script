@@ -1,11 +1,13 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: Wealthsimple Toolbox Script
+description: Run scripts using Wealthsimple's Actions Toolbox (internal only)
+author: Wealthsimple
 inputs:
-  milliseconds: # change this
+  script:
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: The script to run
+outputs:
+  result:
+    description: The return value of the script, stringified with `JSON.stringify`
 runs:
-  using: 'node12'
+  using: 'node14'
   main: 'dist/index.js'

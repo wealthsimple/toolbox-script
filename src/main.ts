@@ -1,19 +1,23 @@
-import * as core from '@actions/core'
-import {wait} from './wait'
+import * as core from '@actions/core';
+import * as io from '@actions/io';
+import { callAsyncFunction } from './async-function';
 
-async function run(): Promise<void> {
-  try {
-    const ms: string = core.getInput('milliseconds')
-    core.debug(`Waiting ${ms} milliseconds ...`) // debug is only output if you set the secret `ACTIONS_RUNNER_DEBUG` to true
+process.on('unhandledRejection', handleError);
+main().catch(handleError);
 
-    core.debug(new Date().toTimeString())
-    await wait(parseInt(ms, 10))
-    core.debug(new Date().toTimeString())
+async function main(): Promise<void> {
+  const script = core.getInput('script', { required: true });
+  const result = await callAsyncFunction(
+    { require: require, core, io },
+    script,
+  );
+  const output = JSON.stringify(result);
 
-    core.setOutput('time', new Date().toTimeString())
-  } catch (error) {
-    core.setFailed(error.message)
-  }
+  core.setOutput('result', output);
 }
 
-run()
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function handleError(err: any): void {
+  console.error(err);
+  core.setFailed(`Unhandled error: ${err}`);
+}
