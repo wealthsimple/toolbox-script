@@ -894,6 +894,40 @@ function copyFile(srcFile, destFile, force) {
 
 /***/ }),
 
+/***/ 614:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.run = exports.printMsg = void 0;
+const core_1 = __importDefault(__nccwpck_require__(186));
+function printMsg(msg) {
+    core_1.default.info(msg);
+}
+exports.printMsg = printMsg;
+function run() {
+    return __awaiter(this, void 0, void 0, function* () {
+        printMsg('Hello from actions-toolbox');
+    });
+}
+exports.run = run;
+//# sourceMappingURL=hello.js.map
+
+/***/ }),
+
 /***/ 852:
 /***/ ((__unused_webpack_module, __webpack_exports__, __nccwpck_require__) => {
 
@@ -905,6 +939,8 @@ __nccwpck_require__.r(__webpack_exports__);
 var core = __nccwpck_require__(186);
 // EXTERNAL MODULE: ./node_modules/@actions/io/lib/io.js
 var io = __nccwpck_require__(436);
+// EXTERNAL MODULE: ./node_modules/@wealthsimple/actions-toolbox/src/hello.js
+var hello = __nccwpck_require__(614);
 // CONCATENATED MODULE: ./src/async-function.ts
 const AsyncFunction = Object.getPrototypeOf(async () => null).constructor;
 function callAsyncFunction(args, source) {
@@ -916,11 +952,12 @@ function callAsyncFunction(args, source) {
 
 
 
+
 process.on('unhandledRejection', handleError);
 main().catch(handleError);
 async function main() {
     const script = core.getInput('script', { required: true });
-    const result = await callAsyncFunction({ require: __nccwpck_require__(875), core: core, io: io }, script);
+    const result = await callAsyncFunction({ require: __nccwpck_require__(875), core: core, io: io, toolbox: hello }, script);
     const output = JSON.stringify(result);
     core.setOutput('result', output);
 }

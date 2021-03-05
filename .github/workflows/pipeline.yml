@@ -20,4 +20,4 @@ jobs:
       - uses: ./
         with:
           script: |
-            return "Hello"
+            toolbox.run();
