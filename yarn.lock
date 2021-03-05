@@ -732,6 +732,13 @@
   resolved "https://registry.yarnpkg.com/@vercel/ncc/-/ncc-0.27.0.tgz#c0cfeebb0bebb56052719efa4a0ecc090a932c76"
   integrity sha512-DllIJQapnU2YwewIhh/4dYesmMQw3h2cFtabECc/zSJHqUbNa0eJuEkRa6DXbZvh1YPWBtYQoPV17NlDpBw1Vw==
 
+"@wealthsimple/actions-toolbox@^0.0.0":
+  version "0.0.0"
+  resolved "https://nexus.iad.w10external.com/repository/npm/@wealthsimple/actions-toolbox/-/actions-toolbox-0.0.0.tgz#868c06ef62c7b9557ef1c68d7a9ed1d13cbe7d3d"
+  integrity sha512-xQTtiXuXoQRDl7Q2nuco0gAx7Or32lzSwGFUYO3c7gI1FUyRMwARPsY6Ve8Cm4V4QMrOvB+cjutHwUADut+RTg==
+  dependencies:
+    "@actions/core" "^1.2.6"
+
 abab@^2.0.3:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/abab/-/abab-2.0.5.tgz#c0b678fb32d60fc1219c784d6a826fe385aeb79a"
