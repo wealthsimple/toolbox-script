@@ -1,11 +1,91 @@
 module.exports =
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ 120:
+/***/ (function(__unused_webpack_module, exports) {
+
+
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.callAsyncFunction = void 0;
+const AsyncFunction = Object.getPrototypeOf(() => __awaiter(void 0, void 0, void 0, function* () { return null; })).constructor;
+function callAsyncFunction(args, source) {
+    const fn = new AsyncFunction(...Object.keys(args), source);
+    return fn(...Object.values(args));
+}
+exports.callAsyncFunction = callAsyncFunction;
+
+
+/***/ }),
+
+/***/ 109:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(186));
+const io = __importStar(__nccwpck_require__(436));
+const async_function_1 = __nccwpck_require__(120);
+process.on('unhandledRejection', handleError);
+main().catch(handleError);
+function main() {
+    return __awaiter(this, void 0, void 0, function* () {
+        const script = core.getInput('script', { required: true });
+        const result = yield async_function_1.callAsyncFunction({ require: require, core, io }, script);
+        const output = JSON.stringify(result);
+        core.setOutput('result', output);
+    });
+}
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function handleError(err) {
+    console.error(err);
+    core.setFailed(`Unhandled error: ${err}`);
+}
+
+
+/***/ }),
 
 /***/ 351:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
-"use strict";
 
 var __importStar = (this && this.__importStar) || function (mod) {
     if (mod && mod.__esModule) return mod;
@@ -91,7 +171,6 @@ function escapeProperty(s) {
 /***/ 186:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
-"use strict";
 
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -336,7 +415,6 @@ exports.getState = getState;
 /***/ 717:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
-"use strict";
 
 // For internal use, subject to change.
 var __importStar = (this && this.__importStar) || function (mod) {
@@ -372,7 +450,6 @@ exports.issueCommand = issueCommand;
 /***/ 278:
 /***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 
 // We use any as a valid input type
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -398,7 +475,6 @@ exports.toCommandValue = toCommandValue;
 /***/ 962:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
-"use strict";
 
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -600,7 +676,6 @@ function isUnixExecutable(stats) {
 /***/ 436:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
-"use strict";
 
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -894,101 +969,9 @@ function copyFile(srcFile, destFile, force) {
 
 /***/ }),
 
-/***/ 614:
-/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
-
-"use strict";
-
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.run = exports.printMsg = void 0;
-const core_1 = __importDefault(__nccwpck_require__(186));
-function printMsg(msg) {
-    core_1.default.info(msg);
-}
-exports.printMsg = printMsg;
-function run() {
-    return __awaiter(this, void 0, void 0, function* () {
-        printMsg('Hello from actions-toolbox');
-    });
-}
-exports.run = run;
-//# sourceMappingURL=hello.js.map
-
-/***/ }),
-
-/***/ 852:
-/***/ ((__unused_webpack_module, __webpack_exports__, __nccwpck_require__) => {
-
-"use strict";
-// ESM COMPAT FLAG
-__nccwpck_require__.r(__webpack_exports__);
-
-// EXTERNAL MODULE: ./node_modules/@actions/core/lib/core.js
-var core = __nccwpck_require__(186);
-// EXTERNAL MODULE: ./node_modules/@actions/io/lib/io.js
-var io = __nccwpck_require__(436);
-// EXTERNAL MODULE: ./node_modules/@wealthsimple/actions-toolbox/src/hello.js
-var hello = __nccwpck_require__(614);
-// CONCATENATED MODULE: ./src/async-function.ts
-const AsyncFunction = Object.getPrototypeOf(async () => null).constructor;
-function callAsyncFunction(args, source) {
-    const fn = new AsyncFunction(...Object.keys(args), source);
-    return fn(...Object.values(args));
-}
-
-// CONCATENATED MODULE: ./src/main.ts
-
-
-
-
-process.on('unhandledRejection', handleError);
-main().catch(handleError);
-async function main() {
-    const script = core.getInput('script', { required: true });
-    const result = await callAsyncFunction({ require: __nccwpck_require__(875), core: core, io: io, toolbox: hello }, script);
-    const output = JSON.stringify(result);
-    core.setOutput('result', output);
-}
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function handleError(err) {
-    console.error(err);
-    core.setFailed(`Unhandled error: ${err}`);
-}
-
-
-/***/ }),
-
-/***/ 875:
-/***/ ((module) => {
-
-function webpackEmptyContext(req) {
-	var e = new Error("Cannot find module '" + req + "'");
-	e.code = 'MODULE_NOT_FOUND';
-	throw e;
-}
-webpackEmptyContext.keys = () => [];
-webpackEmptyContext.resolve = webpackEmptyContext;
-webpackEmptyContext.id = 875;
-module.exports = webpackEmptyContext;
-
-/***/ }),
-
 /***/ 357:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("assert");;
 
 /***/ }),
@@ -996,7 +979,6 @@ module.exports = require("assert");;
 /***/ 129:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("child_process");;
 
 /***/ }),
@@ -1004,7 +986,6 @@ module.exports = require("child_process");;
 /***/ 747:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("fs");;
 
 /***/ }),
@@ -1012,7 +993,6 @@ module.exports = require("fs");;
 /***/ 87:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("os");;
 
 /***/ }),
@@ -1020,7 +1000,6 @@ module.exports = require("os");;
 /***/ 622:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("path");;
 
 /***/ }),
@@ -1028,7 +1007,6 @@ module.exports = require("path");;
 /***/ 669:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("util");;
 
 /***/ })
@@ -1065,28 +1043,12 @@ module.exports = require("util");;
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__nccwpck_require__.o = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop)
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__nccwpck_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/compat */
 /******/ 	
 /******/ 	__nccwpck_require__.ab = __dirname + "/";/************************************************************************/
 /******/ 	// module exports must be returned from runtime so entry inlining is disabled
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	return __nccwpck_require__(852);
+/******/ 	return __nccwpck_require__(109);
 /******/ })()
 ;

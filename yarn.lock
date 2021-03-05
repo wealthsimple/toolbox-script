@@ -734,8 +734,8 @@
 
 "@wealthsimple/actions-toolbox@^0.0.0":
   version "0.0.0"
-  resolved "https://nexus.iad.w10external.com/repository/npm/@wealthsimple/actions-toolbox/-/actions-toolbox-0.0.0.tgz#868c06ef62c7b9557ef1c68d7a9ed1d13cbe7d3d"
-  integrity sha512-xQTtiXuXoQRDl7Q2nuco0gAx7Or32lzSwGFUYO3c7gI1FUyRMwARPsY6Ve8Cm4V4QMrOvB+cjutHwUADut+RTg==
+  resolved "https://nexus.iad.w10external.com/repository/npm/@wealthsimple/actions-toolbox/-/actions-toolbox-0.0.0.tgz#05ca99079af1397aaab05311ec5c52cf48b25f3e"
+  integrity sha512-+btiGNPHjA1S2OqVcIDRKUcxHhfgJQW3qI45K9Wj7u7onb/bCNFZGu//xCx5m0KOpNVh72xYIvrwfZdrsVxFwA==
   dependencies:
     "@actions/core" "^1.2.6"
 
