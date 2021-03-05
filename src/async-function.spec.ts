@@ -16,13 +16,13 @@ describe('callAsyncFunction', () => {
   });
 
   it('can access process', async () => {
-    await expect(() => callAsyncFunction({} as any, 'process')).not.toThrow(
+    expect(() => callAsyncFunction({} as any, 'process')).not.toThrow(
       ReferenceError,
     );
   });
 
   it('can access console', async () => {
-    await expect(() => callAsyncFunction({} as any, 'console')).not.toThrow(
+    expect(() => callAsyncFunction({} as any, 'console')).not.toThrow(
       ReferenceError,
     );
   });
