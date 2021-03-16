@@ -26,7 +26,7 @@ jobs:
       - name: Commit latest actions-toolbox
         run: |
           git config --global user.email "${{ secrets.ACTIONS_GITHUB_EMAIL }}"
-          git config --global user.name "Wealthsimple"
+          git config --global user.name "${{ secrets.ACTIONS_GITHUB_USERNAME }}"
           git add yarn.lock package.json
           git commit -m "feat(release):Update actions-toolbox to ${{ github.event.inputs.version }}"
           git push
