@@ -1,3 +1,4 @@
+id: update-toolbox
 name: Update actions-toolbox
 on:
   workflow_dispatch:
