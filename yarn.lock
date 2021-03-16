@@ -732,10 +732,10 @@
   resolved "https://nexus.iad.w10external.com/repository/npm/@vercel/ncc/-/ncc-0.27.0.tgz#c0cfeebb0bebb56052719efa4a0ecc090a932c76"
   integrity sha512-DllIJQapnU2YwewIhh/4dYesmMQw3h2cFtabECc/zSJHqUbNa0eJuEkRa6DXbZvh1YPWBtYQoPV17NlDpBw1Vw==
 
-"@wealthsimple/actions-toolbox@0.0.4":
+"@wealthsimple/actions-toolbox@^0.0.4":
   version "0.0.4"
-  resolved "https://nexus.iad.w10external.com/repository/npm/@wealthsimple/actions-toolbox/-/actions-toolbox-0.0.4.tgz#ab501c9131d7d5570258d3158d687866ac3fd048"
-  integrity sha512-ozeCds5/uIQKEsteqPc/QQJ4Xhk5ag+pPQSr5mK1tTGRPKlu2IMLETRuQ8819h3nJnx3PsVUwBih4lFZr8rSPg==
+  resolved "https://nexus.iad.w10external.com/repository/npm/@wealthsimple/actions-toolbox/-/actions-toolbox-0.0.4.tgz#3975639b600c4b9d7bb5367bb6b81cb8685a23ca"
+  integrity sha512-KHidFtnONSVVEkVBUKjLRVnXhl6g8fksIRqjAWj+hkjqENG6rbf6/gs3Euqx0tYC8aiDIh79LiQIIs1NxFnf2w==
   dependencies:
     "@actions/core" "^1.2.6"
     "@wealthsimple/publish-package" "^1.2.1"
