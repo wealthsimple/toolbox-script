@@ -732,22 +732,12 @@
   resolved "https://nexus.iad.w10external.com/repository/npm/@vercel/ncc/-/ncc-0.27.0.tgz#c0cfeebb0bebb56052719efa4a0ecc090a932c76"
   integrity sha512-DllIJQapnU2YwewIhh/4dYesmMQw3h2cFtabECc/zSJHqUbNa0eJuEkRa6DXbZvh1YPWBtYQoPV17NlDpBw1Vw==
 
-"@wealthsimple/actions-toolbox@^0.0.4":
-  version "0.0.4"
-  resolved "https://nexus.iad.w10external.com/repository/npm/@wealthsimple/actions-toolbox/-/actions-toolbox-0.0.4.tgz#3975639b600c4b9d7bb5367bb6b81cb8685a23ca"
-  integrity sha512-KHidFtnONSVVEkVBUKjLRVnXhl6g8fksIRqjAWj+hkjqENG6rbf6/gs3Euqx0tYC8aiDIh79LiQIIs1NxFnf2w==
+"@wealthsimple/actions-toolbox@0.0.6":
+  version "0.0.6"
+  resolved "https://nexus.iad.w10external.com/repository/npm/@wealthsimple/actions-toolbox/-/actions-toolbox-0.0.6.tgz#2b17aa29aaa5f9f6887ea4e63cab9b4a357fcc7a"
+  integrity sha512-y+wNXVan/e4LamcfvJCkk/9oG86vVGB7UZIO0nqBxkK/8HYV36mUMX3Boft4jBPBiqSFlvAj3fnk7SW/e2/YeA==
   dependencies:
     "@actions/core" "^1.2.6"
-    "@wealthsimple/publish-package" "^1.2.1"
-
-"@wealthsimple/publish-package@^1.2.1":
-  version "1.2.1"
-  resolved "https://nexus.iad.w10external.com/repository/npm/@wealthsimple/publish-package/-/publish-package-1.2.1.tgz#44d49818afdcaee9da382a1cee46884809a735ee"
-  integrity sha512-9H5wo44tRc9Cd8Y0Ki3R8K4rdp6gB4T+suMBySDzPp8HaAW16WyY6g9IIAtaPs4UJ0NjwOMD/gSxL1NVmGRviw==
-  dependencies:
-    request "^2.88.0"
-    request-promise-native "^1.0.8"
-    semver "^5.6.0"
 
 abab@^2.0.3, abab@^2.0.5:
   version "2.0.5"
@@ -3415,7 +3405,7 @@ request-promise-core@1.1.4:
   dependencies:
     lodash "^4.17.19"
 
-request-promise-native@^1.0.8, request-promise-native@^1.0.9:
+request-promise-native@^1.0.9:
   version "1.0.9"
   resolved "https://nexus.iad.w10external.com/repository/npm/request-promise-native/-/request-promise-native-1.0.9.tgz#e407120526a5efdc9a39b28a5679bf47b9d9dc28"
   integrity sha512-wcW+sIUiWnKgNY0dqCpOZkUbF/I+YPi+f09JZIDa39Ec+q82CpSYniDp+ISgTTbKmnpJWASeJBPZmoxH84wt3g==
@@ -3424,7 +3414,7 @@ request-promise-native@^1.0.8, request-promise-native@^1.0.9:
     stealthy-require "^1.1.1"
     tough-cookie "^2.3.3"
 
-request@^2.88.0, request@^2.88.2:
+request@^2.88.2:
   version "2.88.2"
   resolved "https://nexus.iad.w10external.com/repository/npm/request/-/request-2.88.2.tgz#d73c918731cb5a87da047e207234146f664d12b3"
   integrity sha512-MsvtOrfG9ZcrOwAW+Qi+F6HbD0CWXEh9ou77uOb7FM2WPhwT7smM833PzanhJLsgXjN89Ir6V2PczXNnMpwKhw==
@@ -3568,7 +3558,7 @@ saxes@^5.0.1:
   dependencies:
     xmlchars "^2.2.0"
 
-"semver@2 || 3 || 4 || 5", semver@^5.5.0, semver@^5.6.0:
+"semver@2 || 3 || 4 || 5", semver@^5.5.0:
   version "5.7.1"
   resolved "https://nexus.iad.w10external.com/repository/npm/semver/-/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
   integrity sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==
